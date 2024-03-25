@@ -1,3 +1,5 @@
-removeStrategy:
-  rbac: SYNC
-  items: NONE
+kind: folder
+name: EphemeralAgents
+description: 'Ephemeral Agents'
+displayName: EphemeralAgents
+
