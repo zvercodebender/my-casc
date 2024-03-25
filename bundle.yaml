@@ -1,9 +1,12 @@
-apiVersion: "1"
-id: "jenkins"
+id: "bundle-1"
+version: "3"
 description: "My Custom Bundles"
-version: "2"
+apiVersion: "1"
+allowCapExceptions: True
+availabilityPattern: ".*"
 jcasc:
   - "jenkins.yaml"
+jsascMergeStrategy: "errorOnConflict"
 plugins:
   - "plugins.yaml"
 rbac:
