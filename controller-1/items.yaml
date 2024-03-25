@@ -1,5 +1,16 @@
-kind: folder
-name: EphemeralAgents
-description: 'Ephemeral Agents'
-displayName: EphemeralAgents
-
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+items:
+- kind: folder
+  name: EphemeralAgents
+  description: 'Ephemeral Agents'
+  displayName: EphemeralAgents
+- kind: folder
+  name: dev
+  description: ''
+  displayName: dev
+  properties:
+  - envVars: {}
+  - itemRestrictions:
+      filter: false
