@@ -1,37 +1,8 @@
-credentials:
-  system:
-    domainCredentials:
-    - credentials:
-      - usernamePassword:
-          id: "acdd945c-50f5-4684-bf5e-1bef2d4ef681"
-          password: "{AQAAABAAAABgWadU+iRZTxO4KwUcVHO8cN1UiQ1aQ9OqgxUisysGiGoKFoEtfdNjmlip47k7xCfWJKi3CNgBUOcsCjGAgpUafWfryZmvwxlObY0gMCfDfQpA8pMvAO5ptmqE1khE9gzG3xR3/bY20Tmq2UZ/OIBcVA==}"
-          scope: GLOBAL
-          username: "zvercodebender"
-          usernameSecret: true
-      - usernamePassword:
-          description: "Github Training Token"
-          id: "training-token"
-          password: "{AQAAABAAAABg301e/Llt6yV2EFBYGWvcflviXTHe1cAnNxTPBM1xV5bOvc/ZGCVIYJVF6MeOlg/riAOj51kdBLsqM1zdEkLi5GEFcxyRAlrcEzdtojYPLiVLHzYfkX4FxIKuZtETLDyh6BCdJ8JiUYJ5cwU/k/LHoQ==}"
-          scope: GLOBAL
-          username: "zvercodebender"
-          usernameSecret: true
 jenkins:
-  agentProtocols:
-  - "Diagnostic-Ping"
-  - "JNLP4-connect"
-  - "OperationsCenter2"
-  - "Ping"
-  authorizationStrategy:
-    loggedInUsersCanDoAnything:
-      allowAnonymousRead: false
   crumbIssuer:
     standard:
       excludeClientIPFromCrumb: false
   disableRememberMe: false
-  disabledAdministrativeMonitors:
-  - "hudson.util.DoubleLaunchChecker"
-  labelAtoms:
-  - name: "built-in"
   markupFormatter: "plainText"
   mode: NORMAL
   myViewsTabBar: "standard"
@@ -78,12 +49,6 @@ jenkins:
             emailAddress: "rick_broker@yahoo.com"
         - "apiToken"
   slaveAgentPort: 50000
-  updateCenter:
-    sites:
-    - id: "core-oc-offline"
-      url: "file:/tmp/jenkins/war/WEB-INF/plugins/update-center.json"
-    - id: "cap-core-oc"
-      url: "https://jenkins-updates.cloudbees.com/update-center/envelope-core-oc/update-center.json"
   views:
   - masters:
       columns:
@@ -104,14 +69,6 @@ jenkins:
   - all:
       name: "all"
   viewsTabBar: "standard"
-beekeeper:
-  enabled: true
-  securityWarnings:
-    enabledForCore: true
-    enabledForPlugins: true
-  upgrades:
-    autoDowngradePlugins: false
-    autoUpgradePlugins: true
 cloudBeesCasCServer:
   disableRemoteValidation: false
   visibility: false
@@ -119,40 +76,6 @@ controllerLifecycleNotifications:
   authenticator: "none"
   enabled: false
   ignoreTlsConnectionErrors: false
-license:
-  certificate: "-----BEGIN CERTIFICATE-----\r\n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\r\nYtKu6n9E5zfwdmouf6yzCqobhJaxndFfs8SOE/A=\r\
-    \n-----END CERTIFICATE-----"
-  key: "-----BEGIN RSA PRIVATE KEY-----\r\nMIIEowIBAAKCAQEA3Xyn0wvcCPl8eirv7mYc7o/wb1rmXaSryr0rNkfgUIGsZF2n\r\
-    \nPRLwtVqXCPRl6c40pLQMaqCrq4dF5khhop4yAcvCjqd8+mzIEiHqqsECJuO9Qo08\r\nLUjFDcNodJphaDJ8b7z5NIR0cyqYBKPd5AMLd+8CtBaJkYbvudkKVsHxfqKGwAUU\r\
-    \nwNJvKOrK/Ybug4ab+3rwAM5AxQRhyYm3sFsuCx+LrzRn0AJk8XP0x0YX/7FLrR/v\r\nnvczBfA1nz9N4LQRKcAGsKLr2H3D8BhHkT9FkZLn+OGXHz6hVXWM/1j8dj/t1AZd\r\
-    \nGzH0ghhQn09L/RgRYcVpXQii0tHzndRvfMOubwIDAQABAoIBAFD0SRsYkJovJlI4\r\n8219oUGJFuZ8oQrFL41wyySR7OlAHFSq7n+iNpzyuZWqTr3AgvlYXdlzVIvja6cZ\r\
-    \n+aXIkJqbcUdW7JVTwWTvRKiY10KDpx92I/KhUHURYVKNQuEk4tqshaGucCnP/bRk\r\neKvoeP6jO6e7PRkV6vVQ4TiIts4Dxz6yZdHDpun2OGzgPRhzAD4Sw4pVkPIe/bt3\r\
-    \nzZDT3YkEC2kICJZohEhSspTZAa9oLggKWTBsHcApXqm9bsoJStEdJa9wn1NEjnho\r\nFXB85AEeSCDhlNQMmtP+4XASYQO8bOa1FPJZbPxcey04EX3bJbqDGimCPx0km9gq\r\
-    \nCeEPR1ECgYEA/NvE/1fS+okJiU7HanXrsmk19o0ebivRW71NHyJuGcGmAUGI++DX\r\nltBIW03adAsQ/T33yTbF/bGpt7s8jMXVz4OaKFAWnBp/O67Nv114gqwutd4j4/e8\r\
-    \nVr3sQiOrEAHWmYBwkUjY48OPmgYYIZBJ5WLeqcKlDC0zM8ov70UxObMCgYEA4D0b\r\na9MgfjRP8y840LclIfH+gepCdUKc2W9KSSnbkd977htMi5BA5hpBhRaMH6plCpx3\r\
-    \nXxVaVKO7qCg8i3YM0mmuL3cH001aW+oZdVKYOWUkfKq+Jtt8kzckLTkhOfTrcwd+\r\nKO8oD62GmicKw4Ixt2cMqMTQCPaWxCLV6vLXYlUCgYAkDTGJNnxePCuf6BuGkkmI\r\
-    \npneLL5OnIZg3/EWCquYHxhRlGXLudqBGYGvwmKkM4ocJlEw/5A9WnH4WNBvt9kcF\r\nzz2rgb+3gg+h8spi/nCwMNx4EbQMTMYNmAaXZ358ScbPHADwtfI2hytySmwmXOws\r\
-    \nSGx2x8nAcrFaMPmko7jhAQKBgGXKl4YM4zUnHhvwlcP5P3v3VGc5Jk4AnR7/LCOm\r\nQqwnXSSrc8XvB+bsiE2X/KfrO87jVDTvhn/hi7A8A6/zOMLTgmS9jenXtWsAC+p8\r\
-    \nQencBgIpqAQPoq9ZWqzEwFaE3dTr09NVLURgqzeS/Ynesh7lQpPiM+W9upbykVUE\r\nQ825AoGBAJrNwHKjeeiaMeSis+azl+jcV9IIeeD5PVaFheD936ZPtatROiXaY2qU\r\
-    \nViKNiWJvshrvtha3Wd4FiUu9F73rte7W/p0xDL2ocW6+wl7we7LEZ5bzh8nTUjmo\r\nuTJ8ML9LUUWZ1f0iCo1uizL05Ar5Z6EsKEMf7DjMev3pB1ElJ8Up\r\
-    \n-----END RSA PRIVATE KEY-----"
 masterprovisioning:
   dockerImageDefinitionConfiguration:
     images:
@@ -189,8 +112,6 @@ support:
   automatedBundleConfiguration:
     componentIds:
     - "CloudBeesAssuranceSupport"
-    - "CascScmRetrieverSupport"
-    - "CloudBeesCasCUpdateLogBundlesSupport"
     - "AgentsConfigFile"
     - "ConfigFileComponent"
     - "OtherConfigFilesComponent"
@@ -254,11 +175,6 @@ security:
     creationOfLegacyTokenEnabled: false
     tokenGenerationOnCreationEnabled: false
     usageStatisticsEnabled: true
-  gitHooks:
-    allowedOnAgents: false
-    allowedOnController: false
-  gitHostKeyVerificationConfiguration:
-    sshHostKeyVerificationStrategy: "knownHostsFileVerificationStrategy"
   sSHD:
     port: -1
   securitySettingsEnforcement:
@@ -272,19 +188,7 @@ unclassified:
     configuredBuildDiscarders:
     - "jobBuildDiscarder"
   bundleStorageService:
-    activated: true
-    bundles:
-    - name: "my-casc"
-      retriever:
-        SCM:
-          ghChecksActivated: false
-          scmSource:
-            git:
-              credentialsId: "training-token"
-              id: "be9066a8-de1d-47c2-b047-104b41b89f9f"
-              remote: "https://github.com/zvercodebender/my-casc.git"
-              traits:
-              - "gitBranchDiscovery"
+    activated: false
     checkOutTimeout: 600
     pollingPeriod: 120
     purgeOnDeactivation: false
@@ -308,9 +212,6 @@ unclassified:
   fingerprints:
     fingerprintCleanupDisabled: false
     storage: "file"
-  location:
-    adminAddress: "address not configured yet <nobody@nowhere>"
-    url: "http://cbci.cloudbees-ci.192.168.17.11.nip.io/cjoc/"
   mailer:
     charset: "UTF-8"
     useSsl: false
@@ -319,14 +220,6 @@ unclassified:
     enabled: false
   pollSCM:
     pollingThreadCount: 10
-  scmGit:
-    addGitTagAction: false
-    allowSecondFetch: false
-    createAccountBasedOnEmail: false
-    disableGitToolChooser: false
-    hideCredentials: false
-    showEntireCommitSummaryInChanges: false
-    useExistingAccountWithSameEmail: false
   usageStatisticsCloudBees:
     disabledJenkinsUsageStatistics: true
     usageStatisticsCollected: true
@@ -335,10 +228,6 @@ unclassified:
 tool:
   cloudbeesPluginUsageAnalyzer:
     enabled: true
-  git:
-    installations:
-    - home: "git"
-      name: "Default"
   mavenGlobalConfig:
     globalSettingsProvider: "standard"
     settingsProvider: "standard"
