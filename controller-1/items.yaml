@@ -8,7 +8,7 @@ items:
   displayName: EphemeralAgents
 - kind: folder
   name: dev
-  description: ''
+  description: 'Dev Folder'
   displayName: dev
   properties:
   - envVars: {}
