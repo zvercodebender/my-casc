@@ -188,7 +188,19 @@ unclassified:
     configuredBuildDiscarders:
     - "jobBuildDiscarder"
   bundleStorageService:
-    activated: false
+    activated: true
+    bundles:
+    - name: "my-casc"
+      retriever:
+        SCM:
+          ghChecksActivated: false
+          scmSource:
+            git:
+              credentialsId: "training-token"
+              id: "be9066a8-de1d-47c2-b047-104b41b89f9f"
+              remote: "https://github.com/zvercodebender/my-casc.git"
+              traits:
+              - "gitBranchDiscovery"
     checkOutTimeout: 600
     pollingPeriod: 120
     purgeOnDeactivation: false
