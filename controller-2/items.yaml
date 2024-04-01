@@ -1,0 +1,12 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+items:
+- kind: folder
+  name: QA
+  description: 'QA Folder'
+  displayName: QA
+  properties:
+  - envVars: {}
+  - itemRestrictions:
+      filter: false
