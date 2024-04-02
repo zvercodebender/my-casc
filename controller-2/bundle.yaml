@@ -1,7 +1,7 @@
 apiVersion: "1"
 id: "bundle-2"
 description: "My CasC Bundle"
-version: "5"
+version: "6"
 availabilityPattern: ".*"
 jcasc:
   - "jenkins.yaml"
