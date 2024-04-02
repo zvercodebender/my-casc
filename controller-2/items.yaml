@@ -3,6 +3,6 @@ removeStrategy:
   items: NONE
 items:
 - kind: folder
-  name: dev
-  description: 'Dev Folder'
-  displayName: dev
+  name: QA
+  description: 'QA Folder'
+  displayName: QA
