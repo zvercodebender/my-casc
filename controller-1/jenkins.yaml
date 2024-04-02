@@ -1,5 +1,6 @@
 jenkins:
   systemMessage: "Welcome to CloudBees CI - bundle 2"
+  numExecutors: 4
 tool:
   cloudbeesPluginUsageAnalyzer:
     enabled: true
