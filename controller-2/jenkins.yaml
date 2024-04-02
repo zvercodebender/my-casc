@@ -1,2 +1,20 @@
 jenkins:
   systemMessage: "Welcome to CloudBees CI - bundle 2"
+
+advisor:
+  acceptToS: true
+  email: "rbroker@cloudbees.com"
+  excludedComponents:
+  - "AgentsSystemConfiguration"
+  - "NodeExecutors"
+  - "AgentsJVMProcessSystemMetricsContents"
+  - "GCLogs"
+  - "AgentsConfigFile"
+  - "ConfigFileComponent"
+  - "RootCAs"
+  - "SlaveLogs"
+  - "OtherConfigFilesComponent"
+  - "HeapUsageHistogram"
+  - "OtherLogs"
+  - "SlaveLaunchLogs"
+  nagDisabled: false
