@@ -1,12 +1,8 @@
 removeStrategy:
   rbac: SYNC
   items: NONE
-# items:
-# - kind: folder
-#   name: dev
-#   description: Dev Folder
-#   displayName: dev
-#   properties:
-#   - envVars: {}
-#   - itemRestrictions:
-#       filter: false
+items:
+- kind: folder
+  name: dev
+  description: 'Dev Folder'
+  displayName: dev
