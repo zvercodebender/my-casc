@@ -4,6 +4,58 @@ jenkins:
   clouds: 
     - operationsCenterAgentProvisioningService
 
+kube:
+  podTemplatesConfiguration:
+    templates:
+    - containers:
+      - args: "12000"
+        command: "sleep"
+        image: "jenkins/inbound-agent"
+        livenessProbe:
+          failureThreshold: 0
+          initialDelaySeconds: 0
+          periodSeconds: 0
+          successThreshold: 0
+          timeoutSeconds: 0
+        name: "containerdemo"
+        workingDir: "/home/jenkins/agent"
+      name: "sharedPod"
+      namespace: "cloudbees-ci"
+      nodeUsageMode: "NORMAL"
+      yamlMergeStrategy: "override"
+    - containers:
+      - args: "120"
+        command: "sleep"
+        image: "jenkins/jnlp-agent-jdk8"
+        livenessProbe:
+          failureThreshold: 0
+          initialDelaySeconds: 0
+          periodSeconds: 0
+          successThreshold: 0
+          timeoutSeconds: 0
+        name: "java8"
+        workingDir: "/home/jenkins/agent"
+      label: "jdk-8"
+      name: "java8"
+      namespace: "cloudbees-ci"
+      yamlMergeStrategy: "override"
+    - containers:
+      - args: "9999999"
+        command: "sleep"
+        image: "jenkins/jnlp-agent-jdk11"
+        livenessProbe:
+          failureThreshold: 0
+          initialDelaySeconds: 0
+          periodSeconds: 0
+          successThreshold: 0
+          timeoutSeconds: 0
+        name: "java11"
+        workingDir: "/home/jenkins/agent"
+      label: "jdk-11"
+      name: "java11"
+      namespace: "cloudbees-ci"
+      yamlMergeStrategy: "override"
+
 advisor:
   acceptToS: true
   email: "rbroker@cloudbees.com"
