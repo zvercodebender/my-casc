@@ -22,21 +22,6 @@ kube:
     - containers:
       - args: "120"
         command: "sleep"
-        image: "jenkins/inbound-agent"
-        livenessProbe:
-          failureThreshold: 0
-          initialDelaySeconds: 0
-          periodSeconds: 0
-          successThreshold: 0
-          timeoutSeconds: 0
-        name: "general"
-        workingDir: "/home/jenkins/agent"
-      name: "general"
-      namespace: "cloudbees-ci"
-      yamlMergeStrategy: "override"
-    - containers:
-      - args: "120"
-        command: "sleep"
         image: "jenkins/jnlp-agent-jdk8"
         livenessProbe:
           failureThreshold: 0
