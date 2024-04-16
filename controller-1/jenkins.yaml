@@ -67,3 +67,9 @@ kube:
       namespace: "cloudbees-ci"
       nodeUsageMode: "NORMAL"
       yamlMergeStrategy: "override"
+
+unclassified:
+  cloudbeesPlatform:
+    server:
+      ignoreSslConnectionErrors: true
+    url: "https://flow-web.rbroker.linkpc.net/"
