@@ -31,7 +31,9 @@ kube:
           timeoutSeconds: 0
         name: "java8"
         workingDir: "/home/jenkins/agent"
-      label: "java8"
+      label: 
+        - "java8"
+        - "jdk-8"
       name: "java8"
       namespace: "cloudbees-ci"
       yamlMergeStrategy: "override"
@@ -48,7 +50,9 @@ kube:
         name: "java11"
         workingDir: "/home/jenkins/agent"
       label: "java11"
-      name: "java11"
+      name: 
+        - "java11"
+        - "jdk-11"
       namespace: "cloudbees-ci"
       yamlMergeStrategy: "override"
     - containers:
