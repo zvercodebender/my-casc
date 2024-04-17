@@ -83,7 +83,22 @@ kube:
       name: "jdk-8"
       namespace: "cloudbees-ci"
       yamlMergeStrategy: "override"
-
+    - containers:
+      - args: "120"
+        command: "sleep"
+        image: "jenkins/jnlp-agent-jdk11"
+        livenessProbe:
+          failureThreshold: 0
+          initialDelaySeconds: 0
+          periodSeconds: 0
+          successThreshold: 0
+          timeoutSeconds: 0
+        name: "jdk-11"
+        workingDir: "/home/jenkins/agent"
+      label: "jdk-11"
+      name: "jdk-11"
+      namespace: "cloudbees-ci"
+      yamlMergeStrategy: "override"
 
 unclassified:
   cloudbeesPlatform:
