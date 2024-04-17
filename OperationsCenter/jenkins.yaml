@@ -7,7 +7,7 @@ jenkins:
   mode: NORMAL
   myViewsTabBar: "standard"
   noUsageStatistics: true
-  numExecutors: 2
+  numExecutors: 0
   primaryView:
     masters:
       columns:
