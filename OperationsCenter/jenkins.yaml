@@ -48,20 +48,21 @@ jenkins:
         - mailer:
             emailAddress: "rick_broker@yahoo.com"
         - "apiToken"
-  # securityRealm:
-  #   ldap:
-  #     configurations:
-  #     - displayNameAttributeName: "cn"
-  #       groupSearchBase: "ou=Group,dc=my-company,dc=com"
-  #       inhibitInferRootDN: true
-  #       managerDN: "cn=Manager,dc=my-company,dc=com"
-  #       managerPasswordSecret: "{AQAAABAAAAAQ6W+7U155CZkpmH7pR8of6P9GO2KfsG3VlKlJTuhoJnU=}"
-  #       server: "rancher.inhouse-broker.org:389"
-  #       userSearchBase: "ou=People,dc=my-company,dc=com"
-  #     disableMailAddressResolver: false
-  #     disableRolePrefixing: true
-  #     groupIdStrategy: "caseInsensitive"
-  #     userIdStrategy: "caseInsensitive"
+  securityRealm:
+    ldap:
+      configurations:
+      - displayNameAttributeName: "cn"
+        groupSearchBase: "ou=Group"
+        inhibitInferRootDN: false
+        managerDN: "cn=Manager,dc=my-company,dc=com"
+        managerPasswordSecret: "{AQAAABAAAAAQyOrguPK8zntBtxppw8GnSu+CkQ8BMefIOEdpagGhfTU=}"
+        rootDN: "dc=my-company,dc=com"
+        server: "rancher.inhouse-broker.org:30389"
+        userSearchBase: "ou=People"
+      disableMailAddressResolver: false
+      disableRolePrefixing: true
+      groupIdStrategy: "caseInsensitive"
+      userIdStrategy: "caseInsensitive"
   slaveAgentPort: 50000
   views:
   - masters:
