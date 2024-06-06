@@ -30,24 +30,24 @@ jenkins:
   remotingSecurity:
     enabled: true
   scmCheckoutRetryCount: 0
-   securityRealm:
-     local:
-       allowsSignup: false
-       enableCaptcha: false
-       users:
-       - id: "admin"
-         name: "System Admin"
-         properties:
-         - "consoleUrlProvider"
-         - "blueSteelRedirectOptOutProperty"
-         - "myView"
-         - preferredProvider:
-             providerId: "default"
-         - "timezone"
-         - "experimentalFlags"
-         - mailer:
-             emailAddress: "rick_broker@yahoo.com"
-         - "apiToken"
+  #  securityRealm:
+  #    local:
+  #      allowsSignup: false
+  #      enableCaptcha: false
+  #      users:
+  #      - id: "admin"
+  #        name: "System Admin"
+  #        properties:
+  #        - "consoleUrlProvider"
+  #        - "blueSteelRedirectOptOutProperty"
+  #        - "myView"
+  #        - preferredProvider:
+  #            providerId: "default"
+  #        - "timezone"
+  #        - "experimentalFlags"
+  #        - mailer:
+  #            emailAddress: "rick_broker@yahoo.com"
+  #        - "apiToken"
   # securityRealm:
   #   ldap:
   #     configurations:
