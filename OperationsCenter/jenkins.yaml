@@ -30,38 +30,38 @@ jenkins:
   remotingSecurity:
     enabled: true
   scmCheckoutRetryCount: 0
-  #  securityRealm:
-  #    local:
-  #      allowsSignup: false
-  #      enableCaptcha: false
-  #      users:
-  #      - id: "admin"
-  #        name: "System Admin"
-  #        properties:
-  #        - "consoleUrlProvider"
-  #        - "blueSteelRedirectOptOutProperty"
-  #        - "myView"
-  #        - preferredProvider:
-  #            providerId: "default"
-  #        - "timezone"
-  #        - "experimentalFlags"
-  #        - mailer:
-  #            emailAddress: "rick_broker@yahoo.com"
-  #        - "apiToken"
   # securityRealm:
-  #   ldap:
-  #     configurations:
-  #     - displayNameAttributeName: "cn"
-  #       groupSearchBase: "ou=Group,dc=my-company,dc=com"
-  #       inhibitInferRootDN: true
-  #       managerDN: "cn=Manager,dc=my-company,dc=com"
-  #       managerPasswordSecret: "{AQAAABAAAAAQ6W+7U155CZkpmH7pR8of6P9GO2KfsG3VlKlJTuhoJnU=}"
-  #       server: "rancher.inhouse-broker.org:389"
-  #       userSearchBase: "ou=People,dc=my-company,dc=com"
-  #     disableMailAddressResolver: false
-  #     disableRolePrefixing: true
-  #     groupIdStrategy: "caseInsensitive"
-  #     userIdStrategy: "caseInsensitive"
+  #   local:
+  #     allowsSignup: false
+  #     enableCaptcha: false
+  #     users:
+  #     - id: "admin"
+  #       name: "System Admin"
+  #       properties:
+  #       - "consoleUrlProvider"
+  #       - "blueSteelRedirectOptOutProperty"
+  #       - "myView"
+  #       - preferredProvider:
+  #           providerId: "default"
+  #       - "timezone"
+  #       - "experimentalFlags"
+  #       - mailer:
+  #           emailAddress: "rick_broker@yahoo.com"
+  #       - "apiToken"
+  securityRealm:
+    ldap:
+      configurations:
+      - displayNameAttributeName: "cn"
+        groupSearchBase: "ou=Group,dc=my-company,dc=com"
+        inhibitInferRootDN: true
+        managerDN: "cn=Manager,dc=my-company,dc=com"
+        managerPasswordSecret: "{AQAAABAAAAAQ6W+7U155CZkpmH7pR8of6P9GO2KfsG3VlKlJTuhoJnU=}"
+        server: "rancher.inhouse-broker.org:389"
+        userSearchBase: "ou=People,dc=my-company,dc=com"
+      disableMailAddressResolver: false
+      disableRolePrefixing: true
+      groupIdStrategy: "caseInsensitive"
+      userIdStrategy: "caseInsensitive"
   slaveAgentPort: 50000
   views:
   - masters:
