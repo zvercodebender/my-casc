@@ -30,7 +30,7 @@ jenkins:
   remotingSecurity:
     enabled: true
   scmCheckoutRetryCount: 0
-   securityRealm:
+    securityRealm:
      local:
        allowsSignup: false
        enableCaptcha: false
