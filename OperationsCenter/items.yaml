@@ -1,7 +1,7 @@
 removeStrategy:
   rbac: SYNC
   items: NONE
-# items:
+items:
 # - kind: managedController
 #   name: controler-1
 #   configuration:
