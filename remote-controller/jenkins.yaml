@@ -1,0 +1,23 @@
+jenkins:
+  numExecutors: 2
+  systemMessage: "Welcome to CloudBees CI - Remote Controller 1"
+  clouds: 
+    - operationsCenterAgentProvisioningService
+
+advisor:
+  acceptToS: true
+  email: "rbroker@cloudbees.com"
+  excludedComponents:
+  - "AgentsSystemConfiguration"
+  - "NodeExecutors"
+  - "AgentsJVMProcessSystemMetricsContents"
+  - "GCLogs"
+  - "AgentsConfigFile"
+  - "ConfigFileComponent"
+  - "RootCAs"
+  - "SlaveLogs"
+  - "OtherConfigFilesComponent"
+  - "HeapUsageHistogram"
+  - "OtherLogs"
+  - "SlaveLaunchLogs"
+  nagDisabled: false
